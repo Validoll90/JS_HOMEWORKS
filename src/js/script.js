@@ -6,15 +6,14 @@ for (let i = 20; i <=30; i+=0.5) {
 
 //
 
- const price = 27;
-let money;
-for (let i = 10; i<=100; i+=10) {
-    money = i * price;
-    console.log(`${i} = ${money}`);
+const money = 27;
+for (let i = 10; i <= 100; i += 10) {
+    console.log(`${i}$ === ${i * money}`);
 }
+
 //
 
-let N=100;
+const N=100;
 let result;
 for (let i =1; i <=100; i++) {
     result = i ** 2;
@@ -32,7 +31,7 @@ for (let i = 1; i <= 100; i++){
 }
 //
 
-let numb = prompt('Введіть число');
+const numb = prompt('Введіть число');
 while (numb % 3 === 0) {
     console.log(numb);
     numb++;
