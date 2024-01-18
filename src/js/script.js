@@ -30,3 +30,5 @@ if (sport === 'Футбол'.toLowerCase()) {
 } else {
     alert('Шкода, що Ви не захотіли ввести свій вид спорту');
 }
+
+alert(`Вам: ${age} років.\n${town}.\nsport: ${sport}.`);
