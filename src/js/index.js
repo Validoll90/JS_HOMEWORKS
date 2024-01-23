@@ -1,13 +1,11 @@
-function sum(a, b) {
-  return a + b;
-}
-sum(4, 5);
+const arrNumb = [];
+const randomNumb = function () {
+  const resultNumb = Math.floor(Math.random() * 100);
+  if (arrNumb.includes(resultNumb)) return randomNumb();
+  arrNumb.push(resultNumb);
+  return resultNumb;
+};
 
-function min(a, b) {
-  return a - b;
+for (let i = 0; i <= 99; i += 1) {
+  console.log(randomNumb());
 }
-min(3, 1);
-function mult(a, b) {
-  return a * b;
-}
-mult(8, 5);
