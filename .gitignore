@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directory
+dependencies
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+/.eslintrc.json
