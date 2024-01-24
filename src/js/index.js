@@ -1,13 +1,17 @@
-function sum(a, b) {
-  return a + b;
+function greet() {
+  console.log(`Hello, my name is ${this.name}! I'm ${this.age} years old`);
 }
-sum(4, 5);
+function createUser(name, age) {
+  const user = {
+    name,
+    age,
+  };
+  user.greet = greet;
+  return user;
+}
 
-function min(a, b) {
-  return a - b;
-}
-min(3, 1);
-function mult(a, b) {
-  return a * b;
-}
-mult(8, 5);
+const user1 = createUser("Valya", 33);
+const user2 = createUser("Vova", 26);
+
+user1.greet();
+user2.greet();
