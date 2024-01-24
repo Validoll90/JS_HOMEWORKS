@@ -14,7 +14,7 @@ for (let i = 10; i <= 100; i += 10) {
 //
 
 const N=100;
-let result;
+let result =0;
 for (let i =1; i <=100; i++) {
     result = i ** 2;
     if (result <=N) {
