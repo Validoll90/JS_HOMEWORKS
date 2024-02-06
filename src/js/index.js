@@ -1,13 +1,27 @@
-function sum(a, b) {
-  return a + b;
-}
-sum(4, 5);
+let userAge = +prompt("Введіть ваш вік", "70");
 
-function min(a, b) {
-  return a - b;
+while (isNaN(userAge) || userAge === 0 || userAge <= 0) {
+  userAge = +prompt("Введіть коректне число", "70");
 }
-min(3, 1);
-function mult(a, b) {
-  return a * b;
+
+const lastNum = userAge % 10;
+let message;
+
+if (userAge >= 11 && userAge <= 19) {
+  message = `${userAge} років`;
+} else {
+  switch (lastNum) {
+    case 1:
+      message = `${userAge} рік`;
+      break;
+    case 2:
+    case 3:
+    case 4:
+      message = `${userAge} роки`;
+      break;
+    default:
+      message = `${userAge} років`;
+  }
 }
-mult(8, 5);
+
+alert(message);
