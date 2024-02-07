@@ -1,11 +1,11 @@
-// const addOne = (x) => x + 1;
-// const square = (x) => x * x;
-// const callbacks = [addOne, square, addOne];
-// const runCallbacks = function (callbackArr, value) {
-//   return callbackArr.reduce((acc, callbacks) => callbacks(acc), value);
-// };
-// const result = runCallbacks(callbacks, 1);
-// console.log(result);
+const addOne = (x) => x + 1;
+const square = (x) => x * x;
+const callbacks = [addOne, square, addOne];
+const runCallbacks = function (callbackArr, value) {
+  return callbackArr.reduce((acc, callbacks) => callbacks(acc), value);
+};
+const result = runCallbacks(callbacks, 1);
+console.log(result);
 
 // // // // // //
 const double = (x) => x * 2;
