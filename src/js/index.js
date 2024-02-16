@@ -8,7 +8,7 @@ const flatArr = function (...arr) {
   const newArr = [];
 
   const flatter = function (arr) {
-    for (let i = 0; i < arr.length; i += 1) {
+    for (let i = 0; i < arr.length; i++) {
       if (typeof arr[i] === "object") {
         flatter(arr[i]);
       } else newArr.push(arr[i]);
