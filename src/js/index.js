@@ -1,13 +1,17 @@
-function sum(a, b) {
-  return a + b;
-}
-sum(4, 5);
+const ladderObj = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    alert(this.step);
+    return this;
+  },
+};
 
-function min(a, b) {
-  return a - b;
-}
-min(3, 1);
-function mult(a, b) {
-  return a * b;
-}
-mult(8, 5);
+ladderObj.up().up().down().showStep();
