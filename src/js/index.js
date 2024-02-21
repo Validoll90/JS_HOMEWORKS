@@ -12,4 +12,4 @@ const myApply = (func, ctx, args) => {
   delete ctx.printName;
 };
 
-myApply(printName, user, ["Mrs."]);
+myApply(printName, user, ["Ms."]);
