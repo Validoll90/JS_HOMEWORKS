@@ -1,13 +1,26 @@
-function sum(a, b) {
-  return a + b;
-}
-sum(4, 5);
+const student = {
+  name: "John",
+  surname: "Doe",
+  age: 30,
+};
 
-function min(a, b) {
-  return a - b;
-}
-min(3, 1);
-function mult(a, b) {
-  return a * b;
-}
-mult(8, 5);
+const printName = function (prefix) {
+  console.log(this);
+  console.log(`${prefix} ${this.surname}`);
+};
+
+const myApply = function (func, context, argsArr) {
+  context.printName = func;
+  context.printName(argsArr, ...argsArr);
+  delete context.printName;
+};
+
+const myBind = function (func, context, argsArr) {
+  return function () {
+    myApply(func, context, argsArr);
+  };
+};
+
+const result = myBind(printName, student, ["Mr"]);
+console.log(result);
+result();
