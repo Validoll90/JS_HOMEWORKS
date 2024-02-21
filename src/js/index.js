@@ -1,13 +1,15 @@
-function sum(a, b) {
-  return a + b;
-}
-sum(4, 5);
+const user = {
+  name: "Vika",
+  surname: "Doe",
+  age: 25,
+};
+const printName = (prefix) => {
+  console.log(`${prefix} ${this.name}`);
+};
+const myApply = (func, ctx, args) => {
+  ctx.printName = func;
+  ctx.printName(args, ...args);
+  delete ctx.printName;
+};
 
-function min(a, b) {
-  return a - b;
-}
-min(3, 1);
-function mult(a, b) {
-  return a * b;
-}
-mult(8, 5);
+myApply(printName, user, ["Mrs."]);
