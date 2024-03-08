@@ -1,8 +1,7 @@
-const arr = document.getElementById("arr");
-let count = 0;
+const ul = document.getElementById("ulId");
 const itemsText = [];
-
-for (const li of arr.querySelectorAll("li")) {
+let count = 0;
+for (const li of ul.querySelectorAll("li")) {
   console.log(li.textContent.trim());
   count++;
   itemsText.push((li.textContent = "Hello"));
@@ -10,4 +9,3 @@ for (const li of arr.querySelectorAll("li")) {
 
 console.log(`Total elements: ${count}`);
 console.log(itemsText);
-.
