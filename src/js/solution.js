@@ -7,5 +7,5 @@ for (const li of ul.querySelectorAll("li")) {
   itemsText.push((li.textContent = "Hello"));
 }
 
-console.log(`Total elements: ${count}`);
+console.log(`All elements: ${count}`);
 console.log(itemsText);
