@@ -10,3 +10,4 @@ for (const li of arr.querySelectorAll("li")) {
 
 console.log(`Total elements: ${count}`);
 console.log(itemsText);
+.
